@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title','Acceuil')
+@section('title','Acceuil | '.env('APP_NAME'))
 
 @section('content')
 <section id="change">
@@ -24,7 +24,7 @@
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
 
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Bienvenue sur l'acceuil </h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Bienvenue sur l'acceuil {{dump(config('chabla.citation'))}}</h2>
 
     </section>
 </section>

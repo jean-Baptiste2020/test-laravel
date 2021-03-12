@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title','Contactez-Nous')
+@section('title','Contactez-Nous | '.env('APP_NAME'))
 
 @section('content')
 
