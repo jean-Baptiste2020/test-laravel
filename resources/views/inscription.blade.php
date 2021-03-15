@@ -1,6 +1,6 @@
 @extends('base')
 
-@section('title','Contactez-Nous | '.env('APP_NAME'))
+@section('title','Inscrivez-vous | '.env('APP_NAME'))
 
 @section('content')
 
@@ -9,7 +9,7 @@
     <div class="container">
         <img src="images/img2.webp" alt="" height=150px style="margin-top:20px;">
         <!-- Contact Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Contactez-Nous</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Inscrivez-Vous</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
             <div class="divider-custom-line"></div>
@@ -20,38 +20,44 @@
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19.-->
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form action="{{route('inscription')}}" method="POST">
+
+                    {{csrf_field()}}
+
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Name</label>
-                            <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
+                            <label>Nom</label>
+                            <input class="form-control" id="nom" type="text" placeholder="Nom" required="required" data-validation-required-message="Please enter your name." name="nom" />
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Email Address</label>
-                            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
+                            <label>Prenom</label>
+                            <input class="form-control" id="prenom" type="text" placeholder="Prenom" required="required" data-validation-required-message="Please enter your email address." name="prenom" />
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Phone Number</label>
-                            <input class="form-control" id="phone" type="tel" placeholder="Phone Number" required="required" data-validation-required-message="Please enter your phone number." />
+                            <label>Age</label>
+                            <input class="form-control" id="age" type="number" placeholder="Age" required="required" data-validation-required-message="Please enter your phone number." name="age" />
                             <p class="help-block text-danger"></p>
                         </div>
                     </div>
                     <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter a message."></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
+
+
+                        <label for="rad">Sexe
+                            <input type="radio" id="rad" required="required" value="Masculin" name="sex" checked="checked">M
+                            <input type="radio" id="rad" required="required" value="Féminin" name="sex" checked="checked">F
+                        </label>
                     </div>
+
+
                     <br />
                     <div id="success"></div>
-                    <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Send</button></div>
+                    <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Valider</button></div>
                 </form>
             </div>
         </div>

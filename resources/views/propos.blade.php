@@ -6,6 +6,7 @@
 
 <!-- About Section-->
 <section class="page-section bg-primary text-white mb-0" id="about" style="margin-top: 20px;">
+    <img src="images/img2.webp" alt="" height=150px style="margin-top:20px;">
     <div class="container">
         <!-- About Section Heading-->
         <h2 class="page-section-heading text-center text-uppercase text-white">A Propos</h2>

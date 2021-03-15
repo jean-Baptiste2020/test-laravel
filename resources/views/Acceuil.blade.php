@@ -4,7 +4,9 @@
 
 @section('content')
 <section id="change">
+
     <header class="masthead bg-primary text-white text-center">
+        <img src="images/img1.png" alt="" height=100px style="margin-top:20px;">
         <div class="container d-flex align-items-center flex-column">
 
             <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="" />
@@ -24,7 +26,7 @@
     <section class="page-section portfolio" id="portfolio">
         <div class="container">
 
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Bienvenue sur l'acceuil {{dump(config('chabla.citation'))}}</h2>
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Bienvenue sur l'acceuil </h2>
 
     </section>
 </section>
